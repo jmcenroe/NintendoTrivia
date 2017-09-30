@@ -39,34 +39,35 @@ $('document').ready(function(){
 
 	/* loop for questions */
 	function triviaValues(){
-		for(i=0; i<8 ;i++){
+		for(i=0; i<8 ; i++){
 			/* index of each a1, a2, a3, etc */
 			var userInput = $('input[name="a'+ i +'"]:checked').value;
 			/* add to score counters */
 			if(userInput==="true"){
-				correctQuestions+=1;
+				correctQuestions + 1;
 			} else if (userInput==="false"){
-				incorrectQuestions+=1;
+				incorrectQuestions + 1;
 			} else if (userInput==="default"){
-				unansweredQuestions+=1;
+				unansweredQuestions + 1;
 			}
-		}
+		};
 	};
 
-	function logResults(){
+	function showResults(){
 		/* clear time counters, stop timers from running */
 		clearInterval(counter);
 		timeLeft=0;
 		/* insert values to html */
-		$(".timer").html("<p> You got " + correctQuestions + " right; " + 
-			incorrectQuestions + " wrong; " + unansweredQuestions + 
-			" question(s) remained unanswered</p>");
+		$('.timer').html('<li> You got ' + correctQuestions + ' right ' + 
+			'<li> You got ' + incorrectQuestions + ' wrong </li>' + 
+			'<li>' + unansweredQuestions + 
+			' remained unanswered</li>');
 	};
 	/* click 'Done', get values, return values, and hide trivia question and timer page */
 	$(".done").on("click",function(){
 		triviaValues();
-		logResults();
-		$(".done .sectionWrap").addClass("hide");
+		showResults();
+		$(".done .wrapper").addClass("hide");
 	});
 
 	/* on click, restore defaults */
@@ -77,10 +78,9 @@ $('document').ready(function(){
 		clearInterval(counter);
 		clearInterval(secondsInterval);
 		timeLeft = 0;
-		// $(".sectionWrap").addClass("hide");
-		$(".start").removeClass("hide");
+		$(".sectionWrap").addClass("hide");
 		$(".timer").html("");
-		$(".done").removeClass("hide");
+		$(".startScreen, .start, .done").removeClass("hide");
 	});
 
 });
