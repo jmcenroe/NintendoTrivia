@@ -1,0 +1,33 @@
+body {
+		font-family: 'Helvetica Neue','Helvetica', sans-serif;
+		line-height: 1.3;
+	}
+
+	.wrapper {
+		margin-left: 18%;
+		max-width: 80%;
+	}
+
+	.header {
+		background-image:url('../images/controller.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		text-align: center;
+		background-color: #f80000;
+		height: 70%;
+		width: 80%;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.done{
+		height: 75px;
+		width: 125px;
+	}
+
+	.reset{
+		height: 75px;
+		width: 125px;
+	}
