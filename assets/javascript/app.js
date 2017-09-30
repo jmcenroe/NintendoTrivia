@@ -11,7 +11,7 @@ $('document').ready(function(){
 	$(".start").on("click",function(){
 		/* hide start screen, show questions */
 		$(".sectionWrap").removeClass("hide");
-		$(".start, .header").addClass("hide");
+		$(".start, .startScreen").addClass("hide");
 
 		/* one for timesUp counter, the other for regular counter for 45 seconds*/
 		timeLeft = 45;
@@ -29,10 +29,10 @@ $('document').ready(function(){
 	    	};
 
 		function timesUp(){
-			$(".Mainsection").removeClass("hide");
+			$(".mainSection").removeClass("hide");
 			triviaValues();
 			logResults();
-			$("sectionWrap .done").addClass("hide");
+			$(".sectionWrap .done").addClass("hide");
 		};
 
 	}); /* end start button click */
@@ -41,7 +41,7 @@ $('document').ready(function(){
 	function triviaValues(){
 		for(i=0; i<8 ;i++){
 			/* index of each a1, a2, a3, etc */
-			var userInput = $('input[name="a'+i+'"]:checked').value;
+			var userInput = $('input[name="a'+ i +'"]:checked').value;
 			/* add to score counters */
 			if(userInput==="true"){
 				correctQuestions+=1;
@@ -58,7 +58,9 @@ $('document').ready(function(){
 		clearInterval(counter);
 		timeLeft=0;
 		/* insert values to html */
-		$(".timer").html("<p> You got " + correctQuestions + " right and " + incorrectQuestions + " wrong. " + unansweredQuestions + " question(s) remained unanswered.</p>");
+		$(".timer").html("<p> You got " + correctQuestions + " right; " + 
+			incorrectQuestions + " wrong; " + unansweredQuestions + 
+			" question(s) remained unanswered</p>");
 	};
 	/* click 'Done', get values, return values, and hide trivia question and timer page */
 	$(".done").on("click",function(){
@@ -75,7 +77,7 @@ $('document').ready(function(){
 		clearInterval(counter);
 		clearInterval(secondsInterval);
 		timeLeft = 0;
-		$(".sectionWrap").addClass("hide");
+		// $(".sectionWrap").addClass("hide");
 		$(".start").removeClass("hide");
 		$(".timer").html("");
 		$(".done").removeClass("hide");
