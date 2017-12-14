@@ -31,7 +31,7 @@ $('document').ready(function(){
 		function timesUp(){
 			$(".mainSection").removeClass("hide");
 			triviaValues();
-			logResults();
+			logshowResults();
 			$(".sectionWrap .done").addClass("hide");
 		};
 
