@@ -41,14 +41,14 @@ $('document').ready(function(){
 	function triviaValues(){
 		for(i=0; i<8 ; i++){
 			/* index of each a1, a2, a3, etc */
-			var userInput = $('input[name="a'+ i +'"]:checked').value;
+			var userInput = $('input[name="a+ i +"]:checked').value;
 			/* add to score counters */
 			if(userInput==="true"){
-				correctQuestions + 1;
+				correctQuestions++;
 			} else if (userInput==="false"){
-				incorrectQuestions + 1;
+				incorrectQuestions++;
 			} else if (userInput==="default"){
-				unansweredQuestions + 1;
+				unansweredQuestions++;
 			}
 		};
 	};
@@ -61,13 +61,13 @@ $('document').ready(function(){
 		$('.timer').html('<li> You got ' + correctQuestions + ' right ' + 
 			'<li> You got ' + incorrectQuestions + ' wrong </li>' + 
 			'<li>' + unansweredQuestions + 
-			' remained unanswered</li>');
+			' remain unanswered</li>');
 	};
 	/* click 'Done', get values, return values, and hide trivia question and timer page */
 	$(".done").on("click",function(){
 		triviaValues();
 		showResults();
-		$(".done .wrapper").addClass("hide");
+		$(".sectionWrap").addClass("hide");
 	});
 
 	/* on click, restore defaults */
@@ -80,7 +80,7 @@ $('document').ready(function(){
 		timeLeft = 0;
 		$(".sectionWrap").addClass("hide");
 		$(".timer").html("");
-		$(".startScreen, .start, .done").removeClass("hide");
+		$(".startScreen").removeClass("hide");
 	});
 
 });
