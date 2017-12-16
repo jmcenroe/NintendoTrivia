@@ -6,6 +6,7 @@ $('document').ready(function(){
 	var unansweredQuestions = 0;
 	var counter;
 	var timeLeft;
+	var questions = ["a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8"];
 
 	/* click button to begin */
 	$(".start").on("click",function(){
@@ -29,9 +30,10 @@ $('document').ready(function(){
 	    	};
 
 		function timesUp(){
+			console.log(timesUp);
 			$(".mainSection").removeClass("hide");
 			triviaValues();
-			logResults();
+			logshowResults();
 			$(".sectionWrap .done").addClass("hide");
 		};
 
@@ -39,21 +41,30 @@ $('document').ready(function(){
 
 	/* loop for questions */
 	function triviaValues(){
-		for(i=0; i<8 ; i++){
+		console.log(triviaValues);
+		for(i=0; questions.length; i++){
 			/* index of each a1, a2, a3, etc */
-			var userInput = $('input[name="a+ i +"]:checked').value;
+			$.each($('input[name="a + i +"]:checked'), function(){
+				if ($(this).val() === questions[i].true) {
+		        document.correctQuestions++;
+		      }
+		      else {
+		        document.incorrectQuestions++;
+		      };
 			/* add to score counters */
-			if(userInput==="true"){
-				correctQuestions++;
-			} else if (userInput==="false"){
-				incorrectQuestions++;
-			} else if (userInput==="default"){
-				unansweredQuestions++;
-			}
+			// if(userInput==="true"){
+			// 	correctQuestions++;
+			// } else if (userInput==="false"){
+			// 	incorrectQuestions++;
+			// } else if (userInput==="default"){
+			// 	unansweredQuestions++;
+			// }
+			});
 		};
 	};
 
 	function showResults(){
+		console.log(showResults);
 		/* clear time counters, stop timers from running */
 		clearInterval(counter);
 		timeLeft=0;
@@ -68,6 +79,7 @@ $('document').ready(function(){
 		triviaValues();
 		showResults();
 		$(".sectionWrap").addClass("hide");
+		console.log(done);
 	});
 
 	/* on click, restore defaults */
