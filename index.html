@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="author" content="Jarrod McEnroe" />
     <title>Nintendo Trivia</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -14,81 +15,145 @@
 <body>
     <div class="wrapper">
         <div class="startScreen">
-    		<h1>Nintendo Trivia!</h1>
+            <h1>Nintendo Trivia!</h1>
         </div>
-    <div class="start" class="blink">Start Game</div>
-    	<div class="sectionWrap hide">
-    		<h2 class="timer"></h2>
-			<div class="triviaRow">
-				<h2>What year was Nintendo founded?</h2>
-				<form>
-					<input type="radio" name="a1" value="false">1969<br>
-					<input type="radio" name="a1" value="false">1989<br>
-					<input type="radio" name="a1" value="true">1889<br>
-				</form>
-			</div>
-			<div class="triviaRow">
-				<h2>Nintendo started as a video game company.</h2>
-				<form>
-					<input type="radio" name="a2" value="false">true<br>
-					<input type="radio" name="a2" value="true">false<br>
-				</form>
-			</div>
-			<div class="triviaRow">
-				<h2>Nintendo got its start making:</h2>
-				<form>
-					<input type="radio" name="a3" value="false">video games<br>
-					<input type="radio" name="a3" value="true">playing cards<br>
-					<input type="radio" name="a3" value="false">toys<br>
-				</form>
-			</div>
-			<div class="triviaRow">
-				<h2>The company once owned a baseball team</h2>
-				<form>
-					<input type="radio" name="a4" value="true">true<br>
-					<input type="radio" name="a4" value="false">false<br>
-				</form>
-			</div>
-			<div class="triviaRow">
-				<h2>Nintendo had the same president for more than:</h2>
-				<form>
-					<input type="radio" name="a5" value="true">50 years<br>
-					<input type="radio" name="a5" value="false">10 years<br>
-					<input type="radio" name="a5" value="false">25 years<br>
-				</form>
-			</div>
-			<div class="triviaRow">
-				<h2>The GameCube console isn't actually a perfect cube</h2>
-				<form>
-					<input type="radio" name="a6" value="true">true<br>
-					<input type="radio" name="a6" value="false">false<br>
-				</form>
-			</div>
-			<div class="triviaRow">
-				<h2>What was the first console game that allowed you to save your game?</h2>
-				<form>
-					<input type="radio" name="a7" value="true">The Legend of Zelda<br>
-					<input type="radio" name="a7" value="false">Super Mario Bros.<br>
-					<input type="radio" name="a7" value="false">Punch Out!!<br>
-				</form>
-			</div>
-			<div class="triviaRow">
-				<h2>Mario first appeared in which game?</h2>
-				<form>
-					<input type="radio" name="a8" value="false">Super Mario Bros.<br>
-					<input type="radio" name="a8" value="false">Final Fantasy<br>
-					<input type="radio" name="a8" value="true">Donkey Kong<br>
-				</form>
-			</div>
-			<div class="buttons">
-				<button class="done" type="submit" value="submit">Done</button>
-				<button class="reset">Reset</button>
-			</div>
+        <div class="start blink">Start Game</div>
+        <div class="sectionWrap hide">
+            <h2 class="timer"></h2>
+            <div class="triviaRow">
+                <h2>What year was Nintendo founded?</h2>
+                <form>
+                    <label>
+                        <input type="radio" name="a1" value="false">1969
+                        <br>
+                    </label>
+                    <label>
+                        <input type="radio" name="a1" value="false">1989
+                        <br>
+                    </label>
+                    <label>
+                        <input type="radio" name="a1" value="true">1889
+                        <br>
+                    </label>
+                </form>
+            </div>
+            <div class="triviaRow">
+                <h2>Nintendo started as a video game company.</h2>
+                <form>
+                    <label>
+                        <input type="radio" name="a2" value="false">true
+                        <br>
+                    </label>
+                    <label>
+                        <input type="radio" name="a2" value="true">false
+                        <br>
+                    </label>
+                </form>
+            </div>
+            <div class="triviaRow">
+                <h2>Nintendo got its start making:</h2>
+                <form>
+                    <label>
+                        <input type="radio" name="a3" value="false">video games
+                        <br>
+                    </label>
+                    <label>
+                        <input type="radio" name="a3" value="true">playing cards
+                        <br>
+                    </label>
+                    <label>
+                        <input type="radio" name="a3" value="false">toys
+                        <br>
+                    </label>
+                </form>
+            </div>
+            <div class="triviaRow">
+                <h2>The company once owned a baseball team</h2>
+                <form>
+                    <label>
+                        <input type="radio" name="a4" value="true">true
+                        <br>
+                    </label>
+                    <label>
+                        <input type="radio" name="a4" value="false">false
+                        <br>
+                    </label>
+                </form>
+            </div>
+            <div class="triviaRow">
+                <h2>Nintendo had the same president for more than:</h2>
+                <form>
+                    <label>
+                        <input type="radio" name="a5" value="false">10 years
+                        <br>
+                    </label>
+                    <label>
+                        <input type="radio" name="a5" value="false">25 years
+                        <br>
+                    </label>
+                    <label>
+                        <input type="radio" name="a5" value="true">50 years
+                        <br>
+                    </label>
+                </form>
+            </div>
+            <div class="triviaRow">
+                <h2>The GameCube console is a perfect cube</h2>
+                <form>
+                    <label>
+                        <input type="radio" name="a6" value="false">true
+                        <br>
+                    </label>
+                    <label>
+                        <input type="radio" name="a6" value="true">false
+                        <br>
+                    </label>
+                </form>
+            </div>
+            <div class="triviaRow">
+                <h2>What was the first console game that allowed you to save your game?</h2>
+                <form>
+                    <label>
+                        <input type="radio" name="a7" value="true">The Legend of Zelda
+                        <br>
+                    </label>
+                    <label>
+                        <input type="radio" name="a7" value="false">Super Mario Bros.
+                        <br>
+                    </label>
+                    <label>
+                        <input type="radio" name="a7" value="false">Punch Out!!
+                        <br>
+                    </label>
+                </form>
+            </div>
+            <div class="triviaRow">
+                <h2>Mario first appeared in which game?</h2>
+                <form>
+                    <label>
+                        <input type="radio" name="a8" value="false">Super Mario Bros.
+                        <br>
+                    </label>
+                    <label>
+                        <input type="radio" name="a8" value="false">Final Fantasy
+                        <br>
+                    </label>
+                    <label>
+                        <input type="radio" name="a8" value="true">Donkey Kong
+                        <br>
+                    </label>
+                </form>
+            </div>
+            <div class="buttons">
+                <a href="#timer">
+                    <button class="done" type="submit" value="submit">Done</button>
+                </a>
+                <button class="reset">Reset</button>
+            </div>
         </div>
     </div>
-
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 
 </html>
