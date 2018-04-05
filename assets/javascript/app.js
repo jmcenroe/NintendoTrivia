@@ -1,4 +1,3 @@
-
 $('document').ready(function(){
 	console.log("Check 1, 2; check 1, 2...");
 
@@ -8,6 +7,8 @@ $('document').ready(function(){
 	var counter;
 	var timeLeft;
 
+	$(".results").addClass("hide");
+
 	/* click button to begin */
 	$(".start").on("click",function(){
 		/* hide start screen, show questions */
@@ -15,8 +16,8 @@ $('document').ready(function(){
 		$(".start, .startScreen").addClass("hide");
 
 		/* one for timesUp counter, the other for regular counter for 45 seconds*/
-		timeLeft = 25;
-		counter = setTimeout(function(){timesUp()},25000);
+		timeLeft = 5;
+		counter = setTimeout(function(){timesUp()},7000);
 
 		/* countDownDisplay function runs every second*/
 	    secondsInterval = setInterval(countDownDisplay,1000);
@@ -26,29 +27,30 @@ $('document').ready(function(){
 	    	if (timeLeft>0){
 			  	timeLeft--;
 			  	$(".timer").html(timeLeft + " Seconds Remaining");
-		    }
-    	};
+			    }
+		};
 
 		function timesUp(){
 			triviaValues();
 			showResults();
 			$(".sectionWrap .done").addClass("hide");
+			$(".results").removeClass("hide");
 		};
+
 	}); /* end start button click */
 
 	/* loop for questions */
 	function triviaValues(){
-		for(i=0; i<9; i++){
+		for(i=0; i<8 ; i++){
 			/* index of each a1, a2, a3, etc */
-			var userInput = $('input[name="a '+i+' "]:checked').val();
-			console.log(userInput);
+			var userInput = $('input[name="a+ i +"]:checked').value;
 			/* add to score counters */
 			if(userInput==="true"){
-				correctQuestions+=1;
+				correctQuestions++;
 			} else if (userInput==="false"){
-				incorrectQuestions+=1;
+				incorrectQuestions++;
 			} else if (userInput==="default"){
-				unansweredQuestions+=1;
+				unansweredQuestions++;
 			}
 		};
 	};
@@ -58,20 +60,17 @@ $('document').ready(function(){
 		clearInterval(counter);
 		timeLeft=0;
 		/* insert values to html */
-		$('.timer').html('<li> You got ' + correctQuestions + ' right ' + 
+		$('.results').html('<li> You got ' + correctQuestions + ' right ' + 
 			'<li> You got ' + incorrectQuestions + ' wrong </li>' + 
 			'<li>' + unansweredQuestions + 
 			' remain unanswered</li>');
 	};
-
 	/* click 'Done', get values, return values, and hide trivia question and timer page */
 	$(".done").on("click",function(){
 		triviaValues();
 		showResults();
-		$('html,body').animate({
-        scrollTop: $(".timer").offset().top},
-        'slow');
-        $(".sectionWrap .done").addClass("hide");
+		$(".sectionWrap").addClass("hide");
+		$(".results").removeClass("hide");
 	});
 
 	/* on click, restore defaults */
@@ -84,7 +83,7 @@ $('document').ready(function(){
 		timeLeft = 0;
 		$(".sectionWrap").addClass("hide");
 		$(".timer").html("");
-		$(".start, .startScreen, .done").removeClass("hide");
+		$(".startScreen .start").removeClass("hide");
 	});
 
 });

@@ -29,6 +29,7 @@ Play here: https://jmcenroe.github.io/trivia-game/
 - Google Fonts
 - JavaScript
 - jQuery
+<<<<<<< HEAD
 
 ### Prerequisites
 
@@ -36,3 +37,5 @@ Play here: https://jmcenroe.github.io/trivia-game/
 - Bootstrap: visit http://getbootstrap.com/getting-started/ for the CDN and link in html
 - jQuery: visit http://code.jquery.com/ and link in html
 ```
+=======
+>>>>>>> aa29b0d9193a85f949f2eb0457c94143d44a0a71
