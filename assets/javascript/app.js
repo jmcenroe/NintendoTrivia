@@ -31,8 +31,8 @@ $('document').ready(function(){
 		function timesUp(){
 			triviaValues();
 			showResults();
-			$(".sectionWrap .done").hide();
-			$(".results").show();
+			$(".sectionWrap .done").fadeOut(slow);
+			$(".results").fadeIn(slow);
 		}
 
 	}); /* end start button click */
