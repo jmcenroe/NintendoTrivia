@@ -74,7 +74,6 @@ h1 {
 }
 
 p.timer {
-	font-size: 
 	height: 127px;
 	background-color: #f80000;
 	color: #fff;
@@ -97,10 +96,7 @@ p.timer {
 	text-align: center;
 	font-size: 24px;
 	padding: 3%;
-}
-
-.triviaRow:first-child {
-	padding-top: 200px;
+	display: none;
 }
 
 .triviaRow {
@@ -118,6 +114,15 @@ p.timer {
 	border: 3px solid #ff6c00;
 	margin-right: 50px;
 }
+
+.warning {
+	border: 2px solid #f39389;
+	border-radius: 2px;
+	padding: 10px;
+	position: absolute;
+	background-color: #fbd8d4;
+	color: #3b3c40;
+  }
 
 .reset{
     height: 85px;
