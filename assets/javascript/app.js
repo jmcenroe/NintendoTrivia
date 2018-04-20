@@ -11,7 +11,7 @@ $('document').ready(function () {
 
 	$(".start").on("click", function () {
 		/* hide start screen, show questions */
-		$(".start, .startScreen").fadeOut(0);
+		$(".start, .startScreen").fadeOut(200);
 		$(".questions, .sectionWrap").fadeIn(1000);
 
 		timeLeft = 5;
@@ -30,11 +30,12 @@ $('document').ready(function () {
 			}
 		}
 
-		function timesUp() {
+		function timesUp(event) {
+			// event.preventDefault();
+			$(".sectionWrap, .done").fadeOut(200);
+			$(".results").fadeIn(1000);
 			triviaValues();
 			showResults();
-			$(".sectionWrap, .done").fadeOut();
-			$(".results").fadeIn(2000);
 		}
 
 	}); /* end start button click */
@@ -59,18 +60,19 @@ $('document').ready(function () {
 		/* clear time counters, stop timers from running */
 		clearInterval(counter);
 		timeLeft = 0;
-		/* insert values to html */
-		$(".results").html("<li> You got " + correctQuestions + " right </li>" +
+		// /* insert values to html */
+		$(".results").html("<li> You got " + correctQuestions + " right </li>" + 
 			"<li> You got " + incorrectQuestions + " wrong </li>" +
 			"<li>" + unansweredQuestions +
 			" remain unanswered</li>");
 	};
 	/* click 'Done', get values, return values, and hide trivia questions */
-	$(".done").on("click", function () {
+	$(".done").on("click", function (event) {
+		event.preventDefault();
 		triviaValues();
 		showResults();
-		$(".sectionWrap").fadeOut(1000);
-		$(".results").fadeIn(2000);
+		$(".sectionWrap").fadeOut(200);
+		$(".results").fadeIn(1000);
 	});
 
 	/* click 'Reset' to restore defaults */
