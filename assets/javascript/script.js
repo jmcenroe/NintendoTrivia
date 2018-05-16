@@ -1,14 +1,14 @@
-$('document').ready(function () {
-    var startScreen;
-    var startButton;
-    var timer;
-    var counter;
-    var answer;
+$('document').ready(() => {
+    let initialScreen;
+    let startButton;
+    let timer;
+    let counter;
+    let answer;
     let correctQuestions = 0;
     let incorrectQuestions = 0;
     let unansweredQuestions = 0;
     let timeLeft;
-    var questionArray = [{
+    let questionArray = [{
             question: "What year was Nintendo founded?",
             answers: [{
                     text: "1969",
@@ -139,33 +139,33 @@ $('document').ready(function () {
             answerButton.html(questionArray[questionNumber].answers[i].text);
             $(".display").append(answerButton);
         }
-    }
+    };
 
-    (right) => {
+    right => {
         correctQuestions++;
         const correctAnswer = "<p>You're right!</p>";
         gameText = correctAnswer;
         $(".display").html(gameText);
         setTimeout(displayNext, 3000);
-    }
+    };
 
-    (wrong) => {
+    wrong => {
         incorrectQuestions++;
         const wrongAnswer = "<p>Sorry, that's not correct</p>";
         gameText = wrongAnswer;
         $(".display").html(gameText);
         setTimeout(displayNext, 3000);
-    }
+    };
 
-    (timesUp) => {
+    timesUp => {
         unansweredQuestions++;
         const noAnswer = "<p>Time's up!</p>";
         gameText = noAnswer;
         $(".display").html(gameText);
         setTimeout(displayNext, 3000);
-    }
+    };
 
-    (gameTimer) => {
+    gameTimer => {
         timer = setInterval(countDown, 1000);
         (countDown) => {
             if (timeLeft === 0) {
@@ -176,10 +176,10 @@ $('document').ready(function () {
             }
             $("#timer").html(timer);
         }
-    }
+    };
 
     // Changes screen to the next question, incrememnts right/wrong/unanswered and resets timer
-    (displayNext) => {
+    displayNext => {
         if (questionNumber < questionArray.length -1) {
             questionNumber++;
             insertHTML();
@@ -187,9 +187,9 @@ $('document').ready(function () {
         } else {
             results();
         }
-    }
+    };
 
-    (results) => {
+    results => {
         const finalScore = "<p>Score:</p>";
         const finalCorrect = "<p>You got " + correctQuestions + " right</p>";
         const finalIncorrect = "<p>You got " + correctQuestions + " wrong</p>";
@@ -197,9 +197,9 @@ $('document').ready(function () {
         const resetButton = "<button class='reset' type='button'>PLAY AGAIN</button>";
         gameText = finalScore + finalCorrect + finalIncorrect + finalUnanswered + resetButton;
         $(".display").html(gameText);
-    }
+    };
 
-    (reset) => {
+    reset => {
         questionNumber = 0;
         correctQuestions = 0;
         incorrectQuestions = 0;
@@ -207,15 +207,15 @@ $('document').ready(function () {
         counter = 20;
         insertHTML();
         timer();
-    }
+    };
 
     // Creates start screen w/ start button
-    (startScreen) => {
+    initialScreen => {
         const firstScreen = "<div class='startScreen'>background-image:url('../images/controller.jpg');";
         const startButton = "<div class='startButton blink'>Start Game</div>";
-        startScreen = firstScreen + startButton;
-        $(".display").html(startScreen)
-    }
+        initialScreen = firstScreen + startButton;
+        $(".display").html(initialScreen)
+    };
 
     // Click Start Game to begin
     $("body").on("click", ".startButton", (event) => {
@@ -242,5 +242,5 @@ $('document').ready(function () {
         reset();
     });
 
-    startScreen();
+    initialScreen();
 });
