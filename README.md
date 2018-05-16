@@ -22,7 +22,7 @@ If the timer goes to zero, the results screen will appear by default.
 
 You can also hit the "Reset" button if you would like to start over before time is up.
 
-Play here: https://jmcenroe.github.io/trivia-game/
+Play here: https://jmcenroe.github.io/triviaGame/
 
 
 ## Technologies used
