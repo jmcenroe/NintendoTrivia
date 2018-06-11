@@ -65,6 +65,7 @@ $('document').ready(function () {
 			"<li>" + unansweredQuestions +
 			" remain unanswered</li>");
 	}
+	
 	/* click 'Done', get values, return values, and hide trivia questions */
 	$(".done").on("click", function () {
 		triviaValues();
