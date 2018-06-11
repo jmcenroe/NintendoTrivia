@@ -16,7 +16,7 @@ $('document').ready(function () {
 
 		timeLeft = 25;
 		counter = setTimeout(function () {
-			timesUp()
+			timesUp();
 		}, 25000);
 
 		/* countDownDisplay function runs every second */
@@ -52,8 +52,8 @@ $('document').ready(function () {
 			} else if (userInput === "default") {
 				unansweredQuestions++;
 			}
-		};
-	};
+		}
+	}
 
 	function showResults() {
 		/* clear time counters, stop timers from running */
@@ -64,7 +64,7 @@ $('document').ready(function () {
 			"<li> You got " + incorrectQuestions + " wrong </li>" +
 			"<li>" + unansweredQuestions +
 			" remain unanswered</li>");
-	};
+	}
 	/* click 'Done', get values, return values, and hide trivia questions */
 	$(".done").on("click", function () {
 		triviaValues();
