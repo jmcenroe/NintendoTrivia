@@ -14,10 +14,10 @@ $('document').ready(function () {
 		$(".start, .startScreen").fadeOut(0);
 		$(".questions, .sectionWrap").fadeIn(1000);
 
-		timeLeft = 5;
+		timeLeft = 25;
 		counter = setTimeout(function () {
 			timesUp()
-		}, 6000);
+		}, 25000);
 
 		/* countDownDisplay function runs every second */
 		secondsInterval = setInterval(countDownDisplay, 1000);
