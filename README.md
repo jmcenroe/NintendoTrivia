@@ -1,6 +1,4 @@
-# TriviaGame
-
-**Nintendo Trivia!**
+# Nintendo Trivia!
 
 This app is a timed trivia game. There are You have 15 seconds to answer fifteen questions. After the final question, a results screen will show you how you did.
 
