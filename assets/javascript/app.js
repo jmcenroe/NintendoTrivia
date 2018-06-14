@@ -43,7 +43,7 @@ $(document).ready(function() {
 	  },
 	  {
 	    question: "The company once owned a baseball team. Which one?",
-	    choices: ["Oakland As", "NY Yankees", "LA Dogers", "Seattle Mariners"],
+	    choices: ["Oakland As", "NY Yankees", "LA Dodgers", "Seattle Mariners"],
 	    correctAnswer: "Seattle Mariners",
 	    image: "<img src='assets/images/mariners.svg' class='img-responsive'>"
 	  },
@@ -81,7 +81,7 @@ $(document).ready(function() {
 	    question: "What was the first NES game to use the 'Konami Code'?",
 	    choices: ["Contra", "Life Force", "Gradius", "R-Type"],
 	    correctAnswer: "Gradius",
-	    image: "<img src='assets/images/gradius.jpeg' class='img-responsive'>"
+	    image: "<img src='assets/images/gradius.jpg' class='img-responsive'>"
 	  },
 	  {
 	    question: "Which was the first SNES game to render 3D graphics?",
