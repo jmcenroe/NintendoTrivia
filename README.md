@@ -2,7 +2,7 @@
 
 **Nintendo Trivia!**
 
-This app is a timed trivia game. You have 45 seconds to answer eight questions. After all of the questions are answered, click 'Done' to see how you did.
+This app is a timed trivia game. You have 25 seconds to answer eight questions. After all of the questions are answered, click 'Done' to see how you did.
 
 ## Motivation
 
