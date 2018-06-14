@@ -5,7 +5,7 @@ $(document).ready(function() {
     var incorrectGuesses = 0;
 
     var questions = [
-      {
+		{
 	    question: "What year was Nintendo founded?",
 	    choices: ["1969", "1989", "1982", "1889"],
 	    correctAnswer: "1889",
@@ -112,7 +112,6 @@ $(document).ready(function() {
     		"</strong></p>");
 	}
 
-	// user guessed correctly
 	function right() {
 		$(".gameScreen").html("<p>You got it right!</p>");
 		correctGuesses++;
@@ -125,7 +124,6 @@ $(document).ready(function() {
 		questionCounter++;
 	}
 
-	// user guessed incorrectly
 	function wrong() {
 		$(".gameScreen").html("<p>Nope, that's not it!</p>");
 		incorrectGuesses++;
@@ -138,7 +136,6 @@ $(document).ready(function() {
 		questionCounter++;
 	}
 
-	// user ran out of time
 	function timesUp() {
 		if (time === 0) {
 			$(".gameScreen").html("<p>You ran out of time!</p>");
@@ -153,7 +150,7 @@ $(document).ready(function() {
 		}
 	}
 
-	// screen that shows final score and nice message
+	// screen that shows final score and message
 	function resultsScreen() {
 		if (correctGuesses === questions.length) {
 			var endMessage = "Perfect! Might want to go outside more though";
@@ -169,13 +166,13 @@ $(document).ready(function() {
 		$(".gameScreen").html("<p>" + endMessage + "</p>" + "<p>You got <strong>" + 
 			correctGuesses + "</strong> right.</p>" + 
 			"<p>You got <strong>" + incorrectGuesses + "</strong> wrong.</p>");
-		$(".gameScreen").append("<h1 id='start'>Start Over?</h1>");
+		$(".gameScreen").append("<h1 id='reset'>Start Over?</h1>");
 		$("#bottomText").html(bottomText);
 		gameReset();
-		$(".start").click(nextQuestion);
+		$("#reset").click(nextQuestion);
 	}
 
-	// game clock:
+	// game clock
 	function timer() {
 		clock = setInterval(countDown, 1000);
 		function countDown() {
@@ -190,7 +187,7 @@ $(document).ready(function() {
 		}
 	}
 
-	// moves question counter forward to show next question
+	// advances question counter forward and shows next question
 	function nextQuestion() {
 		if (questionCounter < questions.length) {
 			time = 15;
@@ -212,14 +209,14 @@ $(document).ready(function() {
 	}
 
     function startGame() {
-    	$(".gameScreen").html("<p>You have <span id='timer'>" + time + "</span> seconds left!</p>");
+    $(".gameScreen").html("<p>You have <span id='timer'>" + time + "</span> seconds left!</p>");
 		$(".start .gameScreen").hide();
 		questionContent();
     	timer();
     	timesUp();
     }
 
-    // this starts the game
+    // starts the game
     $(".start").click(nextQuestion);
 
     // click function to trigger right or wrong screen

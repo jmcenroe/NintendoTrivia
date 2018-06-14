@@ -2,7 +2,7 @@
 
 **Nintendo Trivia!**
 
-This app is a timed trivia game. You have 25 seconds to answer eight questions. After all of the questions are answered, click 'Done' to see how you did.
+This app is a timed trivia game. There are You have 15 seconds to answer fifteen questions. After the final question, a results screen will show you how you did.
 
 ## Motivation
 
@@ -11,16 +11,15 @@ I have been a Nintendo nerd since playing NES as a youngster. I wanted to create
 ## To play:
 
 Click "Start Game"
-The 45-second timer begins as soon as the next screen appears, showing a list of eight questions with multiple choice or true/false answers.
+The 15-second timer begins as soon as the next screen appears, showing a each question individually with multiple choice answers.
 
-Click on the radio button ("bubble") next to the best answer for each question. You can choose
-only one answer per question.
+Click on the best answer for each question. You can choose only one answer per question.
 
-When you have answered all of the questions, click the "Done" button at the bottom to see how many questions you answered correctly, how many you answered incorrectly, and how many you did not answer.
+When you have answered all of the questions, a results screen will show how many questions you answered correctly and how many you answered incorrectly.
 
-If the timer goes to zero, the results screen will appear by default.
+If the timer goes to zero, the correct answer will be shown.
 
-You can also hit the "Reset" button if you would like to start over before time is up.
+On the results screen, you can click "Start Over" if you would like to start the quiz again.
 
 Play here: https://jmcenroe.github.io/triviaGame/
 
