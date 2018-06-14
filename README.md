@@ -19,7 +19,7 @@ If the timer goes to zero, the correct answer will be shown.
 
 On the results screen, you can click "Start Over" if you would like to start the quiz again.
 
-Play here: https://jmcenroe.github.io/triviaGame/
+Play here: https://jmcenroe.github.io/NintendoTrivia/
 
 
 ## Technologies used
