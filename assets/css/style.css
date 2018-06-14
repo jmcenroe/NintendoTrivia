@@ -1,157 +1,73 @@
-* {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+body { 
+	background: url(../images/mainBG.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-family: 'Luckiest Guy', sans-serif;
 }
 
-/*Hiding elements*/
-.hide{
-	display: none;
+h1,
+h2,
+h3 {
+	font-family: 'Press Start 2P', cursive;
+	color: white;
+	padding: 25px;
+    text-shadow: 2px 2px red;
+    text-align: center; 
 }
 
-body {
-	font-family: 'Luckiest Guy';
-	line-height: 1.3;
-	background-image:url('../images/mainBG.jpg');
-	}
-
-a {
-	text-decoration: none;
-}
-
-li {
-	list-style: none;
-}
-
-.wrapper {
-	width: 960px;
-	margin: 0 auto;
-}
-
-.startScreen {
-    height: 25em;
-	background-image:url('../images/controller.jpg');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	text-align: center;
-    margin-top: 6em;
-	
-	@media (max-width: 768px) {
-		margin-right: 21%;
-	}
+.answer,
+#timer {
+	font-weight: 900;
 }
 
 .start {
-	position: absolute;
-    top: 19%;
-    left: 40%;
+	height: 400px;
+    margin-top: 0;
+    text-align: center;
+    position: relative;
+}
+
+.start p {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family: 'Press Start 2P';
-    font-size: 32px;
-    color: #fff; 
+    font-size: 5em; 
 	animation: blink 1s linear infinite;
+}
 
-	@media (max-width: 768px) {   
-		    width: 320px;
-			left: 318px;
-			top: 19%;
-	}
-
-	@media (max-width: 480px) {    
-		    width: 320px;
-		    top: 33%;
-		    left: 66%;
-	}
+.start p:hover {
+	cursor: pointer;
 }
 
 @keyframes blink{
-50%{opacity: 0;}
+    50%{opacity: 0;}
 }
 
-h1 {
-	color: #fff;
-	font-size: 48px;
-}
-
-p.timer {
-	height: 127px;
-	background-color: #f80000;
-	color: #fff;
-	font-size: 36px;
-	margin: 0 auto;
-}
-
-
-.timer {
-	vertical-align: center;
-	background-color: #f80000; 
-	color: #fff;
-	font-size: 36px;
-	margin: 0 auto;
-}
-
-.sectionWrap {
-	background-color: #fff;
-	box-shadow: 10px 10px 5px #000;
+.choices {
 	text-align: center;
-	font-size: 24px;
-	padding: 3%;
-	display: none;
+	border: groove 2px black;
+	border-radius: 5%;
+	width: 500px;
+	margin: 0 auto;
 }
 
-.triviaRow {
-	margin: 30px auto;
+.choices:hover {
+	background-color: red;
+	color: white;
+	cursor: pointer;
 }
 
-.done {
-    height: 85px;
-    width: 85px;
-	background-color: #ffbd00;
-	box-shadow: 10px 10px 5px #000;
-	font-family: 'Luckiest Guy';
-	font-size: 24px;
-	color: #ff6c00;
-	border: 3px solid #ff6c00;
-	margin-right: 50px;
+.gameScreen {
+	background-repeat: no-repeat;
+    background-color: #fff;
+    box-shadow: 10px 10px 5px #000;
 }
 
-.warning {
-	border: 2px solid #f39389;
-	border-radius: 2px;
-	padding: 10px;
-	position: absolute;
-	background-color: #fbd8d4;
-	color: #3b3c40;
-  }
-
-.reset{
-    height: 85px;
-    width: 85px;
-	background-color: #ffbd00;
-	box-shadow: 10px 10px 5px #000;
-	font-family: 'Luckiest Guy';
-	color: #ff6c00;
-	font-size: 24px;
-	border: 3px solid #ff6c00;
-	margin-right: 50px;
-}
-
-.results {
-    height: 25rem;
-    width: 40rem;
-    margin: auto;
-	background-color: #f80000;
-	box-shadow: 10px 10px 5px #000;
-	display: none;
-    flex-direction: column;
-    align-items: center;
-    vertical-align: middle;
-}
-
-.results li {
-	display: flex;
-	flex-direction: column;
-	margin: 4rem;
-	font-size: 1.7em;
-	color: #fff;
+.img-responsive {
+    margin: 0 auto;
 }
